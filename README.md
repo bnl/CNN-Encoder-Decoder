@@ -1,6 +1,6 @@
 # CNN-Encoder-Decoder
 
-This repository contains the code for training the model, described in the publication *"Noise Reduction in X-ray Photon Correlation Spectroscopy with Convolutional Neural Networks Encoder-Decoder Models"* by T.Konstantinova et.al., *Scientific Reports (2021)*. The data used for training should be downloaded separately using the link below.
+
 
 Files descriptions:
 * `run_training.py` -- the main script to assign the parameters of the model and to run the model. This script calls the initiaion of the data sets and the model (from the file `utils.py`) and training of the moodel (from the file `nets.py`);
