@@ -23,4 +23,4 @@ To run the script, type in the terminal:
 
 Link for the data: 
 
-The folder _data/_ from the archive is to replace the spaceholder folder _data/_ in the current repository, i.e. it must be placed a the same level as the _.py_ files.
+The folder _data/_ contains the data for training and testing the model.
