@@ -89,7 +89,7 @@ def train_autoencoder(
 
         # update the best model
         if i > 1 and validation_error[i] < validation_error[i - 1]:
-            best_net = net
+            torch.save(net, save_folder + "/autoencoder2d_best" + indicator)
 
         # check conditions for early stopping
         if (
@@ -110,10 +110,7 @@ def train_autoencoder(
             print("Saving current autoencoder model to disk")
             torch.save(net, save_folder + "/autoencoder2d_" + str(i + 1) + indicator)
 
-    if best_net:
-        net = best_net
 
-    torch.save(net, save_folder + "/autoencoder2d_best" + indicator)
 
     return train_error, validation_error
 
