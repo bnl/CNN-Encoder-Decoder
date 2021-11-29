@@ -57,7 +57,7 @@ def train_autoencoder(
 
     train_error = []
     validation_error = []
-    best_net = None
+    best_score = 1e9
 
     for i in range(epochs):
         train_costs = []
@@ -88,7 +88,8 @@ def train_autoencoder(
         validation_error.append(eps_val)
 
         # update the best model
-        if i > 1 and validation_error[i] < validation_error[i - 1]:
+        if validation_error[i] < best_score:
+            best_score = validation_error[i]
             torch.save(net, save_folder + "/autoencoder2d_best" + indicator)
 
         # check conditions for early stopping
